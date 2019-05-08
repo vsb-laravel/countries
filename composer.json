@@ -1,5 +1,5 @@
 {
-    "name": "vsb-laravel/contries",
+    "name": "vsb-laravel/countries",
     "description": "Laravel countries model",
     "keywords": ["countries", "laravel", "vsb"],
     "homepage": "https://github.com/vsb-laravel/countries",
