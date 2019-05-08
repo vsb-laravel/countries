@@ -1,0 +1,48 @@
+{
+    "name": "vsb-laravel/contries",
+    "description": "Laravel countries model",
+    "keywords": ["countries", "laravel", "vsb"],
+    "homepage": "https://github.com/vsb-laravel/countries",
+    "support": {
+        "issues": "https://github.com/vsb-laravel/countries/issues",
+        "source": "https://github.com/vsb-laravel/countries"
+    },
+    "authors": [
+        {
+            "name": "Vladimir Bushuev",
+            "email": "v.bushuev@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1"
+    },
+    "require-dev": {
+        "laravel/framework": "5.5.x"
+    },
+    "autoload": {
+
+        "psr-4": {
+            "Vsb\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "files": [
+            "tests/fake.php"
+        ],
+        "psr-4": {
+            "Vsb\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "vsb\\CountryServiceProvider"
+            ]
+        }
+    }
+}
