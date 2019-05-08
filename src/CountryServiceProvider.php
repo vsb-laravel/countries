@@ -9,17 +9,17 @@ class CountryServiceProvider extends LaravelServiceProvider {
     public function boot() {
         $this->registerRoutes();
 
-        $this->loadMigrationsFrom(__DIR__.'/../../database/migrations');
-        $this->loadTranslationsFrom(__DIR__.'/../../resources/lang', 'countries');
-        $this->loadViewsFrom(__DIR__.'/../../resources/views', 'countries');
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+        $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'countries');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'countries');
         $this->publishes([
-            __DIR__.'/../../resources/views' => resource_path('views/vendor/countries'),
+            __DIR__.'/../resources/views' => resource_path('views/vendor/countries'),
         ]);
         $this->publishes([
-            __DIR__.'/../../config/countries.php' => config_path('countries.php'),
+            __DIR__.'/../config/countries.php' => config_path('countries.php'),
         ]);
         $this->publishes([
-            __DIR__.'/../../resources/lang' => resource_path('lang/vendor/countries'),
+            __DIR__.'/../resources/lang' => resource_path('lang/vendor/countries'),
         ]);
     }
     protected function registerRoutes()
@@ -29,7 +29,7 @@ class CountryServiceProvider extends LaravelServiceProvider {
             'namespace' => 'vsb\Http\Controllers',
             // 'middleware' => config('vsb.middleware', 'web'),
         ], function () {
-            $this->loadRoutesFrom(__DIR__.'/../../routes/web.php');
+            $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
         });
     }
     public function register() {
@@ -40,7 +40,7 @@ class CountryServiceProvider extends LaravelServiceProvider {
         // $this->app->singleton('test.locations', function ($app) {
         //     return new LocationManager($app);
         // });
-        $this->mergeConfigFrom(__DIR__.'/../../config/countries.php', 'countries');
+        $this->mergeConfigFrom(__DIR__.'/../config/countries.php', 'countries');
     }
 }
 ?>
