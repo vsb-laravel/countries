@@ -36,6 +36,9 @@
     "minimum-stability": "stable",
     "prefer-stable": false,
     "extra": {
+        "branch-alias": {
+            "dev-master": "dev"
+        },
         "laravel": {
             "providers": [
                 "vsb\\CountryServiceProvider"
