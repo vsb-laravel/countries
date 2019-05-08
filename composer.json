@@ -1,5 +1,6 @@
 {
     "name": "vsb-laravel/countries",
+    "type":"composer-plugin-laravel",
     "description": "Laravel countries model",
     "keywords": ["countries", "laravel", "vsb"],
     "homepage": "https://github.com/vsb-laravel/countries",
@@ -33,7 +34,7 @@
             "Vsb\\Tests\\": "tests/"
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": false,
     "extra": {
         "branch-alias": {
