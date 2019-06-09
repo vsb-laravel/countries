@@ -28,7 +28,7 @@ class CountryServiceProvider extends LaravelServiceProvider {
     protected function registerRoutes()
     {
         Route::group([
-            'prefix' => 'country',
+            'prefix' => 'vsb',
             'namespace' => 'Vsb\Http\Controllers',
             // 'middleware' => config('vsb.middleware', 'web'),
         ], function () {

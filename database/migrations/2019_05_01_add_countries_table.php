@@ -18,7 +18,7 @@ class CountriesTable extends Migration {
 			$table->string('iso',3)->unique('iso')->comment('General country iso code');//->charset('utf8')->collation('utf8_unicode_ci');
 			$table->string('code',3)->unique('code')->comment('General country code');//->charset('utf8')->collation('utf8_unicode_ci');
 			$table->string('name',128)->unique('name')->comment('General country default name');
-			$table->string('phone',5)->unique('phone')->comment('General country phone code');
+			$table->string('phone',64)->index('phone')->comment('General country phone code');
 			$table->integer('enabled')->unsigned()->index('enabled')->default(1)->comment('If not enabled hidden from list');
 			// $table->integer('timezone_id')->unsigned()->index('currency_id');
             //
