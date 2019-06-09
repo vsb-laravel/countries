@@ -29,7 +29,7 @@ class CountryServiceProvider extends LaravelServiceProvider {
     {
         Route::group([
             'prefix' => 'country',
-            'namespace' => 'vsb\Http\Controllers',
+            'namespace' => 'Vsb\Http\Controllers',
             // 'middleware' => config('vsb.middleware', 'web'),
         ], function () {
             $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
