@@ -1,5 +1,5 @@
 <?php
-
+namespace Vsb\database\seeds;
 use Illuminate\Database\Seeder;
 
 class CountriesTableSeeder extends Seeder
