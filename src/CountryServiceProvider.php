@@ -5,9 +5,9 @@ use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 
 
 class CountryServiceProvider extends LaravelServiceProvider {
-    protected $defer = true;// Delay initializing this service for good performance
+    protected $defer = false;// Delay initializing this service for good performance
     public function provides() {
-        return [LocationManager::class];
+        return [];
     }
     public function boot() {
         $this->registerRoutes();
