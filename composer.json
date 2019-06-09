@@ -34,7 +34,7 @@
             "Vsb\\Tests\\": "tests/"
         }
     },
-    "minimum-stability": "dev-master",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "extra": {
         "branch-alias": {
