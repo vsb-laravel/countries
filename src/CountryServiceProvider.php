@@ -1,5 +1,6 @@
 <?php namespace Vsb;
 
+
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 
@@ -11,7 +12,6 @@ class CountryServiceProvider extends LaravelServiceProvider {
     }
     public function boot() {
         $this->registerRoutes();
-
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'countries');
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'countries');
@@ -43,6 +43,10 @@ class CountryServiceProvider extends LaravelServiceProvider {
         // $this->app->singleton('test.locations', function ($app) {
         //     return new LocationManager($app);
         // });
+        $this->app->singleton('vsb.country', function ($app) {
+            // return $app->make(Facades\Country::class);
+            return new Facades\Country();
+        });
         $this->mergeConfigFrom(__DIR__.'/../config/countries.php', 'countries');
     }
 }
