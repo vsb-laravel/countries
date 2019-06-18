@@ -16,6 +16,6 @@ class Country extends Facade {
 	 */
 	protected static function getFacadeAccessor() {
 
-		return 'recaptcha';
+		return 'vsb.country';
 	}
 }
