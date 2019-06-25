@@ -21,7 +21,6 @@
         "laravel/framework": "5.5.x"
     },
     "autoload": {
-
         "psr-4": {
             "Vsb\\": "src/"
         }

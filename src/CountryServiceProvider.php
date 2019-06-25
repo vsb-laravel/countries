@@ -7,9 +7,9 @@ use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 
 class CountryServiceProvider extends LaravelServiceProvider {
     protected $defer = false;// Delay initializing this service for good performance
-    public function provides() {
-        return [];
-    }
+    // public function provides() {
+    //     return [];
+    // }
     public function boot() {
         $this->registerRoutes();
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
@@ -36,6 +36,7 @@ class CountryServiceProvider extends LaravelServiceProvider {
         });
     }
     public function register() {
+        $this->mergeConfigFrom(__DIR__.'/../config/countries.php', 'countries');
         // Register Locations as service
         // $this->app->bind('vsb\Locations\LocationManager', function ($app) {
         //     return new LocationManager($app);
@@ -47,7 +48,7 @@ class CountryServiceProvider extends LaravelServiceProvider {
             // return $app->make(Facades\Country::class);
             return new Facades\Country();
         });
-        $this->mergeConfigFrom(__DIR__.'/../config/countries.php', 'countries');
+
     }
 }
 ?>
